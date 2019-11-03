@@ -1,0 +1,17 @@
+Ref,Qnty,Value,Footprint,Description,Link
+"C1, ",1,10uF,digikey-footprints:0805,Unpolarized capacitor,
+"C2, C3, C6, C7, C5, C8, C4, ",7,1uF,digikey-footprints:0805,Unpolarized capacitor,
+"D1, ",1,UP,LED_SMD:LED_0805_2012Metric_Castellated,Light emitting diode,
+"D2, ",1,DN,LED_SMD:LED_0805_2012Metric_Castellated,Light emitting diode,
+"D3, ",1,DIR,LED_SMD:LED_0805_2012Metric_Castellated,Light emitting diode,
+"D4, ",1,CNT,LED_SMD:LED_0805_2012Metric_Castellated,Light emitting diode,
+"Q2, Q1, Q3, Q6, Q5, Q4, ",6,DMG3414U,Package_TO_SOT_SMD:SOT-23,"4.2A Id, 20V Vds, N-Channel MOSFET, SOT-23",
+"R3, R2, R1, ",3,100k,digikey-footprints:0805,"Resistor, US symbol",
+"R5, R12, R13, R14, R15, R4, ",6,1k,digikey-footprints:0805,"Resistor, US symbol",
+"R6, R9, R10, R11, ",4,220,digikey-footprints:0805,"Resistor, US symbol",
+"R7, R8, ",2,10k,digikey-footprints:0805,"Resistor, US symbol",
+"U1, ",1,ILD207T,digikey-footprints:SOIC-8_W3.9mm,OPTOISOLTR 4KV 2CH TRANS 8-SOIC,LINK
+"U2, ",1,74HC00,digikey-footprints:SOIC-14_W3.9mm,quad 2-input NAND gate,LINK
+"U3, ",1,74AHC04,digikey-footprints:SOIC-14_W3.9mm,Hex Inverter,LINK
+"U4, ",1,74HC74,digikey-footprints:SOIC-14_W3.9mm,"Dual D Flip-flop, Set & Reset",LINK
+"VR1, ",1,SPX3819M5-L-5-0,Package_TO_SOT_SMD:SOT-23-5,"500mA Low drop-out regulator, Fixed Output 5.0V, SOT-23-5",LINK
