@@ -1,0 +1,1580 @@
+EESchema Schematic File Version 4
+LIBS:quadrature_decoder-cache
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Quadrature Decoder"
+Date "2019-10-27"
+Rev "-"
+Comp "VT Ground Station"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L power:GND #PWR017
+U 1 1 5DB9706B
+P 4300 7400
+F 0 "#PWR017" H 4300 7150 50  0001 C CNN
+F 1 "GND" H 4305 7227 50  0000 C CNN
+F 2 "" H 4300 7400 50  0001 C CNN
+F 3 "" H 4300 7400 50  0001 C CNN
+	1    4300 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR025
+U 1 1 5DB97A53
+P 5400 6200
+F 0 "#PWR025" H 5400 6050 50  0001 C CNN
+F 1 "+5V" H 5415 6373 50  0000 C CNN
+F 2 "" H 5400 6200 50  0001 C CNN
+F 3 "" H 5400 6200 50  0001 C CNN
+	1    5400 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1600 4750 2550
+Wire Wire Line
+	4850 1700 4850 2450
+$Comp
+L Transistor_FET:DMG3414U Q2
+U 1 1 5DBB6C6A
+P 2550 2950
+F 0 "Q2" H 2756 2996 50  0000 L CNN
+F 1 "DMG3414U" H 2756 2905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2750 2875 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 2550 2950 50  0001 L CNN
+	1    2550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR020
+U 1 1 5DBC42A4
+P 4250 1550
+F 0 "#PWR020" H 4250 1400 50  0001 C CNN
+F 1 "+5V" H 4265 1723 50  0000 C CNN
+F 2 "" H 4250 1550 50  0001 C CNN
+F 3 "" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR08
+U 1 1 5DBDE779
+P 2250 2550
+F 0 "#PWR08" H 2250 2400 50  0001 C CNN
+F 1 "+12V" H 2265 2723 50  0000 C CNN
+F 2 "" H 2250 2550 50  0001 C CNN
+F 3 "" H 2250 2550 50  0001 C CNN
+	1    2250 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5DBE3C03
+P 4450 2100
+F 0 "#PWR021" H 4450 1850 50  0001 C CNN
+F 1 "GND" H 4455 1927 50  0000 C CNN
+F 2 "" H 4450 2100 50  0001 C CNN
+F 3 "" H 4450 2100 50  0001 C CNN
+	1    4450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5DBE4159
+P 4450 2950
+F 0 "#PWR022" H 4450 2700 50  0001 C CNN
+F 1 "GND" H 4455 2777 50  0000 C CNN
+F 2 "" H 4450 2950 50  0001 C CNN
+F 3 "" H 4450 2950 50  0001 C CNN
+	1    4450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5DBE594C
+P 2650 3150
+F 0 "#PWR011" H 2650 2900 50  0001 C CNN
+F 1 "GND" H 2655 2977 50  0000 C CNN
+F 2 "" H 2650 3150 50  0001 C CNN
+F 3 "" H 2650 3150 50  0001 C CNN
+	1    2650 3150
+	1    0    0    -1  
+$EndComp
+Text Label 1800 2950 0    50   ~ 0
+A
+Connection ~ 4750 1600
+Wire Wire Line
+	2650 2750 2800 2750
+Connection ~ 4750 2550
+$Comp
+L Device:R_US R3
+U 1 1 5DBF9F56
+P 2250 2750
+F 0 "R3" H 2318 2796 50  0000 L CNN
+F 1 "100k" H 2318 2705 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 2290 2740 50  0001 C CNN
+F 3 "~" H 2250 2750 50  0001 C CNN
+	1    2250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5DBFADB8
+P 2950 2750
+F 0 "R5" V 2745 2750 50  0000 C CNN
+F 1 "1k" V 2836 2750 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 2990 2740 50  0001 C CNN
+F 3 "~" H 2950 2750 50  0001 C CNN
+	1    2950 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R7
+U 1 1 5DBFC281
+P 4450 1900
+F 0 "R7" H 4382 1854 50  0000 R CNN
+F 1 "10k" H 4382 1945 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4490 1890 50  0001 C CNN
+F 3 "~" H 4450 1900 50  0001 C CNN
+	1    4450 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5DC31625
+P 5800 7400
+F 0 "#PWR029" H 5800 7150 50  0001 C CNN
+F 1 "GND" H 5805 7227 50  0000 C CNN
+F 2 "" H 5800 7400 50  0001 C CNN
+F 3 "" H 5800 7400 50  0001 C CNN
+	1    5800 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R12
+U 1 1 5DC4DB13
+P 8150 1500
+F 0 "R12" V 8355 1500 50  0000 C CNN
+F 1 "1k" V 8264 1500 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8190 1490 50  0001 C CNN
+F 3 "~" H 8150 1500 50  0001 C CNN
+	1    8150 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R13
+U 1 1 5DC653E7
+P 8150 1950
+F 0 "R13" V 8355 1950 50  0000 C CNN
+F 1 "1k" V 8264 1950 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8190 1940 50  0001 C CNN
+F 3 "~" H 8150 1950 50  0001 C CNN
+	1    8150 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R14
+U 1 1 5DC65F93
+P 8150 2650
+F 0 "R14" V 8355 2650 50  0000 C CNN
+F 1 "1k" V 8264 2650 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8190 2640 50  0001 C CNN
+F 3 "~" H 8150 2650 50  0001 C CNN
+	1    8150 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R15
+U 1 1 5DC67196
+P 8150 3300
+F 0 "R15" V 8355 3300 50  0000 C CNN
+F 1 "1k" V 8264 3300 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8190 3290 50  0001 C CNN
+F 3 "~" H 8150 3300 50  0001 C CNN
+	1    8150 3300
+	0    -1   -1   0   
+$EndComp
+Text Label 9000 1500 2    69   ~ 0
+UP(CW)
+Text Label 9000 1950 2    69   ~ 0
+DN(CCW)
+Text Label 9000 2650 2    69   ~ 0
+DIR
+$Comp
+L dk_Optoisolators-Transistor-Photovoltaic-Output:ILD207T U1
+U 1 1 5DCE2591
+P 3900 1800
+F 0 "U1" H 3900 2287 60  0000 C CNN
+F 1 "ILD207T" H 3900 2181 60  0000 C CNN
+F 2 "digikey-footprints:SOIC-8_W3.9mm" H 4100 2000 60  0001 L CNN
+F 3 "http://www.vishay.com/docs/83647/ild205t.pdf" V 4100 2100 60  0001 L CNN
+F 4 "751-1310-1-ND" H 4100 2200 60  0001 L CNN "Digi-Key_PN"
+F 5 "ILD207T" H 4100 2300 60  0001 L CNN "MPN"
+F 6 "Isolators" H 4100 2400 60  0001 L CNN "Category"
+F 7 "Optoisolators - Transistor, Photovoltaic Output" H 4100 2500 60  0001 L CNN "Family"
+F 8 "http://www.vishay.com/docs/83647/ild205t.pdf" H 4100 2600 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/vishay-semiconductor-opto-division/ILD207T/751-1310-1-ND/1731615" H 4100 2700 60  0001 L CNN "DK_Detail_Page"
+F 10 "OPTOISOLTR 4KV 2CH TRANS 8-SOIC" H 4100 2800 60  0001 L CNN "Description"
+F 11 "Vishay Semiconductor Opto Division" H 4100 2900 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4100 3000 60  0001 L CNN "Status"
+	1    3900 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5DBFB963
+P 2950 1350
+F 0 "R4" V 2745 1350 50  0000 C CNN
+F 1 "1k" V 2836 1350 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 2990 1340 50  0001 C CNN
+F 3 "~" H 2950 1350 50  0001 C CNN
+	1    2950 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 1350 2800 1350
+Text Label 1800 1550 0    50   ~ 0
+B
+$Comp
+L power:GND #PWR010
+U 1 1 5DBE4E02
+P 2650 1750
+F 0 "#PWR010" H 2650 1500 50  0001 C CNN
+F 1 "GND" H 2655 1577 50  0000 C CNN
+F 2 "" H 2650 1750 50  0001 C CNN
+F 3 "" H 2650 1750 50  0001 C CNN
+	1    2650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR06
+U 1 1 5DBBE908
+P 2250 1150
+F 0 "#PWR06" H 2250 1000 50  0001 C CNN
+F 1 "+12V" H 2265 1323 50  0000 C CNN
+F 2 "" H 2250 1150 50  0001 C CNN
+F 3 "" H 2250 1150 50  0001 C CNN
+	1    2250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q1
+U 1 1 5DBBA305
+P 2550 1550
+F 0 "Q1" H 2756 1596 50  0000 L CNN
+F 1 "DMG3414U" H 2756 1505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2750 1475 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 2550 1550 50  0001 L CNN
+	1    2550 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1800 3550 1800
+Wire Wire Line
+	3550 1800 3550 1600
+Wire Wire Line
+	3600 1600 3550 1600
+Connection ~ 3550 1600
+Wire Wire Line
+	3550 1600 3550 1550
+Wire Wire Line
+	4200 1800 4250 1800
+Wire Wire Line
+	4250 1800 4250 1600
+Wire Wire Line
+	4200 1600 4250 1600
+Connection ~ 4250 1600
+Wire Wire Line
+	4250 1600 4250 1550
+Wire Wire Line
+	4200 1700 4450 1700
+Wire Wire Line
+	4200 1900 4250 1900
+Wire Wire Line
+	4250 1900 4250 2550
+Wire Wire Line
+	3300 1700 3600 1700
+$Comp
+L Device:C C2
+U 1 1 5DD6650F
+P 2250 1750
+F 0 "C2" H 2365 1796 50  0000 L CNN
+F 1 "1uF" H 2365 1705 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 2288 1600 50  0001 C CNN
+F 3 "~" H 2250 1750 50  0001 C CNN
+	1    2250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5DD670FF
+P 2250 3150
+F 0 "C3" H 2365 3196 50  0000 L CNN
+F 1 "1uF" H 2365 3105 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 2288 3000 50  0001 C CNN
+F 3 "~" H 2250 3150 50  0001 C CNN
+	1    2250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5DBF621B
+P 2250 1350
+F 0 "R2" H 2318 1396 50  0000 L CNN
+F 1 "100k" H 2318 1305 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 2290 1340 50  0001 C CNN
+F 3 "~" H 2250 1350 50  0001 C CNN
+	1    2250 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5DD76BFA
+P 2250 1950
+F 0 "#PWR07" H 2250 1700 50  0001 C CNN
+F 1 "GND" H 2255 1777 50  0000 C CNN
+F 2 "" H 2250 1950 50  0001 C CNN
+F 3 "" H 2250 1950 50  0001 C CNN
+	1    2250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5DD776FA
+P 2250 3350
+F 0 "#PWR09" H 2250 3100 50  0001 C CNN
+F 1 "GND" H 2255 3177 50  0000 C CNN
+F 2 "" H 2250 3350 50  0001 C CNN
+F 3 "" H 2250 3350 50  0001 C CNN
+	1    2250 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4450 1700
+Connection ~ 4850 1700
+Wire Wire Line
+	2250 2550 2250 2600
+Wire Wire Line
+	2250 2900 2250 2950
+Connection ~ 2250 2950
+Wire Wire Line
+	2250 2950 2350 2950
+Wire Wire Line
+	2250 3000 2250 2950
+Wire Wire Line
+	2250 3300 2250 3350
+Wire Wire Line
+	3100 1350 3300 1350
+Wire Wire Line
+	3300 1350 3300 1700
+Wire Wire Line
+	3300 1900 3300 2750
+Wire Wire Line
+	3300 2750 3100 2750
+Wire Wire Line
+	3300 1900 3600 1900
+Wire Wire Line
+	2250 1150 2250 1200
+Wire Wire Line
+	2250 1500 2250 1550
+Connection ~ 2250 1550
+Wire Wire Line
+	2250 1550 2350 1550
+Wire Wire Line
+	2250 1550 2250 1600
+Wire Wire Line
+	2250 1900 2250 1950
+Wire Wire Line
+	4450 1700 4450 1750
+Wire Wire Line
+	4450 2050 4450 2100
+$Comp
+L Device:R_US R8
+U 1 1 5DBFCE9D
+P 4450 2750
+F 0 "R8" H 4382 2704 50  0000 R CNN
+F 1 "10k" H 4382 2795 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4490 2740 50  0001 C CNN
+F 3 "~" H 4450 2750 50  0001 C CNN
+	1    4450 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 2550 4450 2550
+Wire Wire Line
+	4450 2600 4450 2550
+Connection ~ 4450 2550
+Wire Wire Line
+	4450 2550 4750 2550
+Wire Wire Line
+	4450 2900 4450 2950
+Wire Wire Line
+	6250 1400 6150 1400
+Wire Wire Line
+	6250 1850 6150 1850
+Wire Wire Line
+	6150 1400 6150 1850
+Wire Wire Line
+	6250 2050 6150 2050
+Wire Wire Line
+	6150 2050 6150 2450
+Connection ~ 6150 2450
+Wire Wire Line
+	6150 2450 6250 2450
+Wire Wire Line
+	6850 3100 6900 3100
+Wire Wire Line
+	6850 2450 6900 2450
+Wire Wire Line
+	6850 1950 6950 1950
+Wire Wire Line
+	6850 1500 6950 1500
+Wire Wire Line
+	7550 3100 7700 3100
+Wire Wire Line
+	7550 2450 7700 2450
+Wire Wire Line
+	7550 1950 8000 1950
+Wire Wire Line
+	8000 1500 7550 1500
+Connection ~ 6150 1400
+$Comp
+L Device:C C6
+U 1 1 5DEF8AFD
+P 5600 6300
+F 0 "C6" V 5852 6300 50  0000 C CNN
+F 1 "1uF" V 5761 6300 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 5638 6150 50  0001 C CNN
+F 3 "~" H 5600 6300 50  0001 C CNN
+	1    5600 6300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5DEFACB8
+P 5600 6750
+F 0 "C7" V 5348 6750 50  0000 C CNN
+F 1 "1uF" V 5439 6750 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 5638 6600 50  0001 C CNN
+F 3 "~" H 5600 6750 50  0001 C CNN
+	1    5600 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 6750 4350 6750
+Wire Wire Line
+	4350 6300 4300 6300
+Wire Wire Line
+	4300 6300 4300 6750
+Connection ~ 4300 6750
+Wire Wire Line
+	5350 6300 5400 6300
+Wire Wire Line
+	5350 6750 5400 6750
+Wire Wire Line
+	5400 6200 5400 6300
+Connection ~ 5400 6300
+Wire Wire Line
+	5400 6300 5450 6300
+Wire Wire Line
+	5400 6300 5400 6750
+Connection ~ 5400 6750
+Wire Wire Line
+	5400 6750 5450 6750
+Wire Wire Line
+	5750 6750 5800 6750
+Wire Wire Line
+	5750 6300 5800 6300
+Wire Wire Line
+	5800 6300 5800 6750
+Connection ~ 5800 6750
+Text Label 9000 3300 2    69   ~ 0
+COUNT
+$Comp
+L power:+12V #PWR02
+U 1 1 5DFD6E9B
+P 1600 6550
+F 0 "#PWR02" H 1600 6400 50  0001 C CNN
+F 1 "+12V" H 1615 6723 50  0000 C CNN
+F 2 "" H 1600 6550 50  0001 C CNN
+F 3 "" H 1600 6550 50  0001 C CNN
+	1    1600 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5DFD7E91
+P 1900 6750
+F 0 "C1" H 1700 6800 50  0000 L CNN
+F 1 "10uF" H 1800 6700 50  0000 R CNN
+F 2 "digikey-footprints:0805" H 1938 6600 50  0001 C CNN
+F 3 "~" H 1900 6750 50  0001 C CNN
+	1    1900 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5DFDB129
+P 3650 6900
+F 0 "C5" H 3765 6946 50  0000 L CNN
+F 1 "1uF" H 3765 6855 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 3688 6750 50  0001 C CNN
+F 3 "~" H 3650 6900 50  0001 C CNN
+	1    3650 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR014
+U 1 1 5DFDF06D
+P 3650 6450
+F 0 "#PWR014" H 3650 6300 50  0001 C CNN
+F 1 "+5V" H 3665 6623 50  0000 C CNN
+F 2 "" H 3650 6450 50  0001 C CNN
+F 3 "" H 3650 6450 50  0001 C CNN
+	1    3650 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6550 1900 6550
+Wire Wire Line
+	1900 6600 1900 6550
+Wire Wire Line
+	3650 6750 3650 6550
+$Comp
+L power:GND #PWR05
+U 1 1 5DFEC827
+P 1900 6950
+F 0 "#PWR05" H 1900 6700 50  0001 C CNN
+F 1 "GND" H 1905 6777 50  0000 C CNN
+F 2 "" H 1900 6950 50  0001 C CNN
+F 3 "" H 1900 6950 50  0001 C CNN
+	1    1900 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5DFECEA7
+P 3650 7100
+F 0 "#PWR015" H 3650 6850 50  0001 C CNN
+F 1 "GND" H 3655 6927 50  0000 C CNN
+F 2 "" H 3650 7100 50  0001 C CNN
+F 3 "" H 3650 7100 50  0001 C CNN
+	1    3650 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6900 1900 6950
+Wire Wire Line
+	3650 7050 3650 7100
+$Comp
+L 74xx:74HC00 U2
+U 1 1 5E02BAD4
+P 6550 1500
+F 0 "U2" H 6500 1600 50  0000 C CNN
+F 1 "74HC00" H 6550 1500 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 6550 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6550 1500 50  0001 C CNN
+	1    6550 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U2
+U 5 1 5E03B2EC
+P 4850 6300
+F 0 "U2" V 4700 6300 50  0000 C CNN
+F 1 "74HC00" V 5450 6300 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 4850 6300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4850 6300 50  0001 C CNN
+	5    4850 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74HC74 U4
+U 1 1 5E0A1D1E
+P 5600 2550
+F 0 "U4" H 5450 2800 50  0000 C CNN
+F 1 "74HC74" H 5800 2300 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5600 2550 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 5600 2550 50  0001 C CNN
+	1    5600 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC74 U4
+U 2 1 5E0A3A17
+P 5600 1700
+F 0 "U4" H 5450 1950 50  0000 C CNN
+F 1 "74HC74" H 5750 1450 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5600 1700 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 5600 1700 50  0001 C CNN
+	2    5600 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1600 5300 1600
+Wire Wire Line
+	4850 1700 5300 1700
+Wire Wire Line
+	4850 2450 5300 2450
+Wire Wire Line
+	4750 2550 5300 2550
+$Comp
+L power:+5V #PWR026
+U 1 1 5E0EEBCD
+P 5150 1400
+F 0 "#PWR026" H 5150 1250 50  0001 C CNN
+F 1 "+5V" H 5165 1573 50  0000 C CNN
+F 2 "" H 5150 1400 50  0001 C CNN
+F 3 "" H 5150 1400 50  0001 C CNN
+	1    5150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2850 5150 2850
+Wire Wire Line
+	5150 2850 5150 2250
+Wire Wire Line
+	5600 2250 5150 2250
+Connection ~ 5150 2250
+Wire Wire Line
+	5600 2000 5150 2000
+Wire Wire Line
+	5150 1400 5150 2000
+Connection ~ 5150 2000
+Wire Wire Line
+	5150 2000 5150 2250
+Wire Wire Line
+	5600 1400 5150 1400
+Connection ~ 5150 1400
+Wire Wire Line
+	4750 1100 4750 1600
+$Comp
+L Device:C C8
+U 1 1 5E10A503
+P 5600 7200
+F 0 "C8" V 5348 7200 50  0000 C CNN
+F 1 "1uF" V 5439 7200 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 5638 7050 50  0001 C CNN
+F 3 "~" H 5600 7200 50  0001 C CNN
+	1    5600 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 7200 5400 7200
+Wire Wire Line
+	5400 6750 5400 7200
+Connection ~ 5400 7200
+Wire Wire Line
+	5400 7200 5450 7200
+Wire Wire Line
+	4450 7200 4300 7200
+Wire Wire Line
+	4300 6750 4300 7200
+Wire Wire Line
+	4300 7400 4300 7200
+Connection ~ 4300 7200
+Wire Wire Line
+	5800 7200 5750 7200
+Wire Wire Line
+	5800 6750 5800 7200
+Wire Wire Line
+	5800 7400 5800 7200
+Connection ~ 5800 7200
+Wire Wire Line
+	6150 1100 6150 1400
+Wire Wire Line
+	4750 1100 6150 1100
+Wire Wire Line
+	5900 1600 6000 1600
+Wire Wire Line
+	5900 2450 6150 2450
+$Comp
+L 74xx:74AHC04 U3
+U 1 1 5DBD79A5
+P 7250 1500
+F 0 "U3" H 7200 1500 50  0000 C CNN
+F 1 "74AHC04" H 7250 1300 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 7250 1500 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 7250 1500 50  0001 C CNN
+	1    7250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 2 1 5DBDBB2A
+P 7250 1950
+F 0 "U3" H 7200 1950 50  0000 C CNN
+F 1 "74AHC04" H 7250 1750 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 7250 1950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 7250 1950 50  0001 C CNN
+	2    7250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 3 1 5DBDCCF7
+P 6550 2450
+F 0 "U3" H 6500 2450 50  0000 C CNN
+F 1 "74AHC04" H 6550 2250 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 6550 2450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 6550 2450 50  0001 C CNN
+	3    6550 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 4 1 5DBDDE3D
+P 7250 2450
+F 0 "U3" H 7200 2450 50  0000 C CNN
+F 1 "74AHC04" H 7250 2250 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 7250 2450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 7250 2450 50  0001 C CNN
+	4    7250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 5 1 5DBE03D1
+P 7250 3100
+F 0 "U3" H 7200 3100 50  0000 C CNN
+F 1 "74AHC04" H 7250 2900 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 7250 3100 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 7250 3100 50  0001 C CNN
+	5    7250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 6 1 5DBE151A
+P 6550 3100
+F 0 "U3" H 6500 3100 50  0000 C CNN
+F 1 "74AHC04" H 6550 2900 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 6550 3100 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 6550 3100 50  0001 C CNN
+	6    6550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74AHC04 U3
+U 7 1 5DBE3050
+P 4850 6750
+F 0 "U3" V 4700 6750 50  0000 C CNN
+F 1 "74AHC04" V 4574 6750 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 4850 6750 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 4850 6750 50  0001 C CNN
+	7    4850 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74HC74 U4
+U 3 1 5E0A4D7D
+P 4850 7200
+F 0 "U4" V 4700 7200 50  0000 C CNN
+F 1 "74HC74" V 5000 7200 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 4850 7200 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4850 7200 50  0001 C CNN
+	3    4850 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2950 2050 2950
+Wire Wire Line
+	1800 1550 2050 1550
+$Comp
+L power:GND #PWR01
+U 1 1 5DC4F2C8
+P 1550 6950
+F 0 "#PWR01" H 1550 6700 50  0001 C CNN
+F 1 "GND" H 1555 6777 50  0000 C CNN
+F 2 "" H 1550 6950 50  0001 C CNN
+F 3 "" H 1550 6950 50  0001 C CNN
+	1    1550 6950
+	1    0    0    -1  
+$EndComp
+Connection ~ 1600 6550
+Wire Wire Line
+	1200 6650 1350 6650
+Wire Wire Line
+	1550 6650 1550 6950
+$Comp
+L power:+12V #PWR016
+U 1 1 5DC921E3
+P 3550 1550
+F 0 "#PWR016" H 3550 1400 50  0001 C CNN
+F 1 "+12V" H 3565 1723 50  0000 C CNN
+F 2 "" H 3550 1550 50  0001 C CNN
+F 3 "" H 3550 1550 50  0001 C CNN
+	1    3550 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1500 9000 1500
+$Comp
+L 74xx:74HC00 U2
+U 2 1 5DC3687D
+P 6550 1950
+F 0 "U2" H 6500 2050 50  0000 C CNN
+F 1 "74HC00" H 6550 1950 50  0000 C CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 6550 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6550 1950 50  0001 C CNN
+	2    6550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5DC413BC
+P 4250 2550
+F 0 "TP5" H 4192 2576 50  0000 R CNN
+F 1 "TestPoint" H 4192 2667 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4450 2550 50  0001 C CNN
+F 3 "~" H 4450 2550 50  0001 C CNN
+	1    4250 2550
+	-1   0    0    1   
+$EndComp
+Connection ~ 4250 2550
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5DC4355C
+P 4450 1700
+F 0 "TP6" H 4508 1818 50  0000 L CNN
+F 1 "TestPoint" H 4508 1727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 4650 1700 50  0001 C CNN
+F 3 "~" H 4650 1700 50  0001 C CNN
+	1    4450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP6
+U 1 1 5DC54E6C
+P 7700 3300
+F 0 "JP6" V 7746 3368 50  0000 L CNN
+F 1 "SJB" V 7655 3368 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 7700 3300 50  0001 C CNN
+F 3 "~" H 7700 3300 50  0001 C CNN
+	1    7700 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 3100 6900 3500
+Wire Wire Line
+	6900 3500 7700 3500
+Connection ~ 6900 3100
+Wire Wire Line
+	6900 3100 6950 3100
+Wire Wire Line
+	7850 3300 8000 3300
+Wire Wire Line
+	8300 3300 9000 3300
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP5
+U 1 1 5DC99914
+P 7700 2650
+F 0 "JP5" V 7746 2718 50  0000 L CNN
+F 1 "SJB" V 7655 2718 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 7700 2650 50  0001 C CNN
+F 3 "~" H 7700 2650 50  0001 C CNN
+	1    7700 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7700 2850 6900 2850
+Wire Wire Line
+	6900 2850 6900 2450
+Connection ~ 6900 2450
+Wire Wire Line
+	6900 2450 6950 2450
+Wire Wire Line
+	8000 2650 7850 2650
+Wire Wire Line
+	4750 3100 6250 3100
+Wire Wire Line
+	4750 2550 4750 3100
+$Comp
+L Regulator_Linear:SPX3819M5-L-5-0 VR1
+U 1 1 5DD7E6BD
+P 2750 6650
+F 0 "VR1" H 2750 6992 50  0000 C CNN
+F 1 "SPX3819M5-L-5-0" H 2750 6901 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2750 6975 50  0001 C CNN
+F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 2750 6650 50  0001 C CNN
+	1    2750 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6550 2150 6550
+Connection ~ 1900 6550
+$Comp
+L Device:R_US R1
+U 1 1 5DD995D9
+P 2150 6750
+F 0 "R1" H 2218 6796 50  0000 L CNN
+F 1 "100k" H 2218 6705 50  0000 L CNN
+F 2 "digikey-footprints:0805" V 2190 6740 50  0001 C CNN
+F 3 "~" H 2150 6750 50  0001 C CNN
+	1    2150 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 6600 2150 6550
+Connection ~ 2150 6550
+Wire Wire Line
+	2150 6550 1900 6550
+Wire Wire Line
+	2150 6900 2450 6900
+Wire Wire Line
+	2450 6900 2450 6650
+Wire Wire Line
+	2750 6950 2750 7100
+$Comp
+L power:GND #PWR012
+U 1 1 5DFEDF57
+P 2750 7100
+F 0 "#PWR012" H 2750 6850 50  0001 C CNN
+F 1 "GND" H 2755 6927 50  0000 C CNN
+F 2 "" H 2750 7100 50  0001 C CNN
+F 3 "" H 2750 7100 50  0001 C CNN
+	1    2750 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5DDCB512
+P 3100 6900
+F 0 "C4" H 3215 6946 50  0000 L CNN
+F 1 "1uF" H 3215 6855 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 3138 6750 50  0001 C CNN
+F 3 "~" H 3100 6900 50  0001 C CNN
+	1    3100 6900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 6550
+Wire Wire Line
+	3050 6650 3100 6650
+Wire Wire Line
+	3100 6650 3100 6750
+$Comp
+L power:GND #PWR013
+U 1 1 5DE0B97E
+P 3100 7100
+F 0 "#PWR013" H 3100 6850 50  0001 C CNN
+F 1 "GND" H 3105 6927 50  0000 C CNN
+F 2 "" H 3100 7100 50  0001 C CNN
+F 3 "" H 3100 7100 50  0001 C CNN
+	1    3100 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 7050 3100 7100
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5DEABDDD
+P 1250 2250
+F 0 "J2" H 1222 2224 50  0000 R CNN
+F 1 "Quad" H 1222 2133 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1250 2250 50  0001 C CNN
+F 3 "~" H 1250 2250 50  0001 C CNN
+	1    1250 2250
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5DED1B48
+P 1750 2450
+F 0 "#PWR04" H 1750 2200 50  0001 C CNN
+F 1 "GND" H 1755 2277 50  0000 C CNN
+F 2 "" H 1750 2450 50  0001 C CNN
+F 3 "" H 1750 2450 50  0001 C CNN
+	1    1750 2450
+	1    0    0    -1  
+$EndComp
+Text Label 1600 2050 2    50   ~ 0
+A
+Text Label 1600 2150 2    50   ~ 0
+B
+$Comp
+L power:+12V #PWR03
+U 1 1 5DF0176F
+P 1750 2150
+F 0 "#PWR03" H 1750 2000 50  0001 C CNN
+F 1 "+12V" H 1765 2323 50  0000 C CNN
+F 2 "" H 1750 2150 50  0001 C CNN
+F 3 "" H 1750 2150 50  0001 C CNN
+	1    1750 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2250 1750 2150
+Wire Wire Line
+	1750 2350 1750 2450
+Wire Wire Line
+	1450 2350 1750 2350
+Wire Wire Line
+	1450 2250 1750 2250
+Wire Wire Line
+	1450 2050 1600 2050
+Wire Wire Line
+	1450 2150 1600 2150
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5DF2C50D
+P 1000 6650
+F 0 "J1" H 973 6532 50  0000 R CNN
+F 1 "Power" H 973 6623 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1000 6650 50  0001 C CNN
+F 3 "~" H 1000 6650 50  0001 C CNN
+	1    1000 6650
+	1    0    0    1   
+$EndComp
+Connection ~ 2050 2950
+Wire Wire Line
+	2050 2950 2250 2950
+Connection ~ 2050 1550
+Wire Wire Line
+	2050 1550 2250 1550
+Wire Wire Line
+	4450 1700 4850 1700
+$Comp
+L Connector:Conn_01x05_Male J3
+U 1 1 5DBF264A
+P 9550 3900
+F 0 "J3" H 9522 3832 50  0000 R CNN
+F 1 "Output" H 9522 3923 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 9550 3900 50  0001 C CNN
+F 3 "~" H 9550 3900 50  0001 C CNN
+	1    9550 3900
+	-1   0    0    1   
+$EndComp
+Text Label 8700 3700 0    59   ~ 0
+UP(CW)
+Text Label 8700 3800 0    59   ~ 0
+DN(CCW)
+Text Label 8700 3900 0    59   ~ 0
+DIR
+Text Label 8700 4000 0    59   ~ 0
+COUNT
+$Comp
+L power:GND #PWR032
+U 1 1 5DC0C999
+P 8700 4100
+F 0 "#PWR032" H 8700 3850 50  0001 C CNN
+F 1 "GND" H 8705 3927 50  0000 C CNN
+F 2 "" H 8700 4100 50  0001 C CNN
+F 3 "" H 8700 4100 50  0001 C CNN
+	1    8700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 3700 8700 3700
+Wire Wire Line
+	9350 3800 8700 3800
+Wire Wire Line
+	9350 3900 8700 3900
+Wire Wire Line
+	9350 4000 8700 4000
+Wire Wire Line
+	9350 4100 8700 4100
+Wire Wire Line
+	8300 1950 9000 1950
+Wire Wire Line
+	8300 2650 9000 2650
+Text Label 7850 1500 0    50   ~ 0
+up
+Text Label 7850 1950 0    50   ~ 0
+dn
+Text Label 7900 2650 0    50   ~ 0
+dir
+Text Label 7900 3300 0    50   ~ 0
+cnt
+Wire Wire Line
+	3650 4950 3600 4950
+Text Label 3600 4350 0    50   ~ 0
+up
+Wire Wire Line
+	3950 5150 3950 5200
+Wire Wire Line
+	3950 4700 3950 4750
+Wire Wire Line
+	3950 4350 3950 4400
+Wire Wire Line
+	3950 4000 3950 4050
+$Comp
+L power:GND #PWR019
+U 1 1 5DCE6B01
+P 3950 5200
+F 0 "#PWR019" H 3950 4950 50  0001 C CNN
+F 1 "GND" H 3955 5027 50  0000 C CNN
+F 2 "" H 3950 5200 50  0001 C CNN
+F 3 "" H 3950 5200 50  0001 C CNN
+	1    3950 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR018
+U 1 1 5DCE6600
+P 3950 4000
+F 0 "#PWR018" H 3950 3850 50  0001 C CNN
+F 1 "+5V" H 3965 4173 50  0000 C CNN
+F 2 "" H 3950 4000 50  0001 C CNN
+F 3 "" H 3950 4000 50  0001 C CNN
+	1    3950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q3
+U 1 1 5DC81121
+P 3850 4950
+F 0 "Q3" H 3700 5000 50  0000 L CNN
+F 1 "DMG3414U" H 3550 5100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4050 4875 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 3850 4950 50  0001 L CNN
+	1    3850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5DC687CC
+P 3950 4200
+F 0 "D1" V 3989 4083 50  0000 R CNN
+F 1 "UP" V 3898 4083 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 3950 4200 50  0001 C CNN
+F 3 "~" H 3950 4200 50  0001 C CNN
+	1    3950 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5DC8A030
+P 5900 5200
+F 0 "#PWR031" H 5900 4950 50  0001 C CNN
+F 1 "GND" H 5905 5027 50  0000 C CNN
+F 2 "" H 5900 5200 50  0001 C CNN
+F 3 "" H 5900 5200 50  0001 C CNN
+	1    5900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5DC89E3C
+P 5250 5200
+F 0 "#PWR028" H 5250 4950 50  0001 C CNN
+F 1 "GND" H 5255 5027 50  0000 C CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5DC8970A
+P 4600 5200
+F 0 "#PWR024" H 4600 4950 50  0001 C CNN
+F 1 "GND" H 4605 5027 50  0000 C CNN
+F 2 "" H 4600 5200 50  0001 C CNN
+F 3 "" H 4600 5200 50  0001 C CNN
+	1    4600 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q6
+U 1 1 5DC88152
+P 5800 4950
+F 0 "Q6" H 5650 5000 50  0000 L CNN
+F 1 "DMG3414U" H 5500 5100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6000 4875 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 5800 4950 50  0001 L CNN
+	1    5800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q5
+U 1 1 5DC871FE
+P 5150 4950
+F 0 "Q5" H 5000 5000 50  0000 L CNN
+F 1 "DMG3414U" H 4850 5100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5350 4875 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 5150 4950 50  0001 L CNN
+	1    5150 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:DMG3414U Q4
+U 1 1 5DC84861
+P 4500 4950
+F 0 "Q4" H 4350 5000 50  0000 L CNN
+F 1 "DMG3414U" H 4200 5100 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 4875 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds31739.pdf" H 4500 4950 50  0001 L CNN
+	1    4500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5DC80B71
+P 5900 4200
+F 0 "D4" V 5939 4083 50  0000 R CNN
+F 1 "CNT" V 5848 4083 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 5900 4200 50  0001 C CNN
+F 3 "~" H 5900 4200 50  0001 C CNN
+	1    5900 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5DC6AF6A
+P 5250 4200
+F 0 "D3" V 5289 4083 50  0000 R CNN
+F 1 "DIR" V 5198 4083 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 5250 4200 50  0001 C CNN
+F 3 "~" H 5250 4200 50  0001 C CNN
+	1    5250 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5DC69FBA
+P 4600 4200
+F 0 "D2" V 4639 4083 50  0000 R CNN
+F 1 "DN" V 4548 4083 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 4600 4200 50  0001 C CNN
+F 3 "~" H 4600 4200 50  0001 C CNN
+	1    4600 4200
+	0    -1   -1   0   
+$EndComp
+Text Label 4250 4350 0    50   ~ 0
+dn
+$Comp
+L power:+5V #PWR023
+U 1 1 5DD498EA
+P 4600 4000
+F 0 "#PWR023" H 4600 3850 50  0001 C CNN
+F 1 "+5V" H 4615 4173 50  0000 C CNN
+F 2 "" H 4600 4000 50  0001 C CNN
+F 3 "" H 4600 4000 50  0001 C CNN
+	1    4600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR027
+U 1 1 5DD5B571
+P 5250 4000
+F 0 "#PWR027" H 5250 3850 50  0001 C CNN
+F 1 "+5V" H 5265 4173 50  0000 C CNN
+F 2 "" H 5250 4000 50  0001 C CNN
+F 3 "" H 5250 4000 50  0001 C CNN
+	1    5250 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 5DD5C79F
+P 3950 4550
+F 0 "R6" H 3882 4504 50  0000 R CNN
+F 1 "220" H 3882 4595 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 3990 4540 50  0001 C CNN
+F 3 "~" H 3950 4550 50  0001 C CNN
+	1    3950 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R9
+U 1 1 5DD5F3CA
+P 4600 4550
+F 0 "R9" H 4532 4504 50  0000 R CNN
+F 1 "220" H 4532 4595 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 4640 4540 50  0001 C CNN
+F 3 "~" H 4600 4550 50  0001 C CNN
+	1    4600 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R10
+U 1 1 5DD60769
+P 5250 4550
+F 0 "R10" H 5182 4504 50  0000 R CNN
+F 1 "220" H 5182 4595 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5290 4540 50  0001 C CNN
+F 3 "~" H 5250 4550 50  0001 C CNN
+	1    5250 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R11
+U 1 1 5DD619E8
+P 5900 4550
+F 0 "R11" H 5832 4504 50  0000 R CNN
+F 1 "220" H 5832 4595 50  0000 R CNN
+F 2 "digikey-footprints:0805" V 5940 4540 50  0001 C CNN
+F 3 "~" H 5900 4550 50  0001 C CNN
+	1    5900 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR030
+U 1 1 5DD7527E
+P 5900 4000
+F 0 "#PWR030" H 5900 3850 50  0001 C CNN
+F 1 "+5V" H 5915 4173 50  0000 C CNN
+F 2 "" H 5900 4000 50  0001 C CNN
+F 3 "" H 5900 4000 50  0001 C CNN
+	1    5900 4000
+	1    0    0    -1  
+$EndComp
+Text Label 4900 4350 0    50   ~ 0
+dir
+Text Label 5550 4350 0    50   ~ 0
+cnt
+Wire Wire Line
+	4600 4000 4600 4050
+Wire Wire Line
+	4600 4350 4600 4400
+Wire Wire Line
+	4600 4700 4600 4750
+Wire Wire Line
+	5250 4700 5250 4750
+Wire Wire Line
+	5250 4350 5250 4400
+Wire Wire Line
+	5250 4000 5250 4050
+Wire Wire Line
+	5900 4000 5900 4050
+Wire Wire Line
+	5900 4350 5900 4400
+Wire Wire Line
+	5900 4700 5900 4750
+Wire Wire Line
+	5900 5150 5900 5200
+Wire Wire Line
+	5250 5150 5250 5200
+Wire Wire Line
+	4600 5150 4600 5200
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5DE0FE9C
+P 9550 4600
+F 0 "J4" H 9523 4482 50  0000 R CNN
+F 1 "5V_OUT" H 9523 4573 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9550 4600 50  0001 C CNN
+F 3 "~" H 9550 4600 50  0001 C CNN
+	1    9550 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 5DE191E1
+P 9300 4650
+F 0 "#PWR034" H 9300 4400 50  0001 C CNN
+F 1 "GND" H 9305 4477 50  0000 C CNN
+F 2 "" H 9300 4650 50  0001 C CNN
+F 3 "" H 9300 4650 50  0001 C CNN
+	1    9300 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR033
+U 1 1 5DE1A283
+P 9300 4450
+F 0 "#PWR033" H 9300 4300 50  0001 C CNN
+F 1 "+5V" H 9315 4623 50  0000 C CNN
+F 2 "" H 9300 4450 50  0001 C CNN
+F 3 "" H 9300 4450 50  0001 C CNN
+	1    9300 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4500 9300 4500
+Wire Wire Line
+	9300 4500 9300 4450
+Wire Wire Line
+	9350 4600 9300 4600
+Wire Wire Line
+	9300 4600 9300 4650
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5DE5E6E5
+P 3600 4600
+F 0 "JP1" V 3554 4668 50  0000 L CNN
+F 1 "SJB" V 3645 4668 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 3600 4600 50  0001 C CNN
+F 3 "~" H 3600 4600 50  0001 C CNN
+	1    3600 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 5DE6DA11
+P 4250 4600
+F 0 "JP2" V 4204 4668 50  0000 L CNN
+F 1 "SJB" V 4295 4668 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 4250 4600 50  0001 C CNN
+F 3 "~" H 4250 4600 50  0001 C CNN
+	1    4250 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 4950 4250 4950
+Wire Wire Line
+	4250 4950 4250 4750
+Wire Wire Line
+	4250 4450 4250 4350
+Wire Wire Line
+	3600 4450 3600 4350
+Wire Wire Line
+	3600 4750 3600 4950
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 5DE94E65
+P 4900 4600
+F 0 "JP3" V 4854 4668 50  0000 L CNN
+F 1 "SJB" V 4945 4668 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 4900 4600 50  0001 C CNN
+F 3 "~" H 4900 4600 50  0001 C CNN
+	1    4900 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 5DE9F87E
+P 5550 4600
+F 0 "JP4" V 5504 4668 50  0000 L CNN
+F 1 "SJB" V 5595 4668 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 5550 4600 50  0001 C CNN
+F 3 "~" H 5550 4600 50  0001 C CNN
+	1    5550 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 4950 5550 4950
+Wire Wire Line
+	5550 4950 5550 4750
+Wire Wire Line
+	5550 4450 5550 4350
+Wire Wire Line
+	4900 4350 4900 4450
+Wire Wire Line
+	4900 4750 4900 4950
+Wire Wire Line
+	4900 4950 4950 4950
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5DF46C28
+P 6150 2050
+F 0 "TP8" H 6092 2076 50  0000 R CNN
+F 1 "TestPoint" H 6092 2167 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6350 2050 50  0001 C CNN
+F 3 "~" H 6350 2050 50  0001 C CNN
+	1    6150 2050
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6150 2050
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5DF48970
+P 6000 1400
+F 0 "TP7" H 5942 1426 50  0000 R CNN
+F 1 "TestPoint" H 5942 1517 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6200 1400 50  0001 C CNN
+F 3 "~" H 6200 1400 50  0001 C CNN
+	1    6000 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1400 6000 1600
+Connection ~ 6000 1600
+Wire Wire Line
+	6000 1600 6250 1600
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5DBE29F5
+P 2050 2950
+F 0 "TP4" H 1992 2976 50  0000 R CNN
+F 1 "TestPoint" H 1992 3067 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 2950 50  0001 C CNN
+F 3 "~" H 2250 2950 50  0001 C CNN
+	1    2050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5DBE41A5
+P 2050 1550
+F 0 "TP3" H 1992 1576 50  0000 R CNN
+F 1 "TestPoint" H 1992 1667 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 2250 1550 50  0001 C CNN
+F 3 "~" H 2250 1550 50  0001 C CNN
+	1    2050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5DFDC20D
+P 1350 6450
+F 0 "TP1" H 1292 6476 50  0000 R CNN
+F 1 "TestPoint" H 1292 6567 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 1550 6450 50  0001 C CNN
+F 3 "~" H 1550 6450 50  0001 C CNN
+	1    1350 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5DFDD4B5
+P 1350 6750
+F 0 "TP2" H 1292 6776 50  0000 R CNN
+F 1 "TestPoint" H 1292 6867 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 1550 6750 50  0001 C CNN
+F 3 "~" H 1550 6750 50  0001 C CNN
+	1    1350 6750
+	1    0    0    1   
+$EndComp
+Connection ~ 1350 6650
+Wire Wire Line
+	1350 6650 1550 6650
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5DFE88E3
+P 3550 6450
+F 0 "TP?" H 3492 6476 50  0000 R CNN
+F 1 "TestPoint" H 3492 6567 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 3750 6450 50  0001 C CNN
+F 3 "~" H 3750 6450 50  0001 C CNN
+	1    3550 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E03B906
+P 3550 7050
+F 0 "TP?" H 3492 7076 50  0000 R CNN
+F 1 "TestPoint" H 3492 7167 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 3750 7050 50  0001 C CNN
+F 3 "~" H 3750 7050 50  0001 C CNN
+	1    3550 7050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3550 7050 3650 7050
+Connection ~ 3650 7050
+Wire Wire Line
+	1350 6750 1350 6650
+Wire Wire Line
+	1200 6550 1350 6550
+Wire Wire Line
+	3050 6550 3550 6550
+Wire Wire Line
+	1350 6450 1350 6550
+Connection ~ 1350 6550
+Wire Wire Line
+	1350 6550 1600 6550
+Wire Wire Line
+	3550 6450 3550 6550
+Connection ~ 3550 6550
+Wire Wire Line
+	3550 6550 3650 6550
+Wire Wire Line
+	3650 6450 3650 6550
+$EndSCHEMATC
